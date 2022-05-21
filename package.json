@@ -1,0 +1,23 @@
+{
+  "name": "remote-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "peerDependencies": {
+    "react": "16 - 18",
+    "react-dom": "16 - 18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cairnswm/remote-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cairnswm/remote-component/issues"
+  },
+  "homepage": "https://github.com/cairnswm/remote-component#readme"
+}
