@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "peerDependencies": {
     "react": "16 - 18",
     "react-dom": "16 - 18"
@@ -19,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/cairnswm/remote-component/issues"
   },
-  "homepage": "https://github.com/cairnswm/remote-component#readme"
+  "homepage": "https://github.com/cairnswm/remote-component#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/preset-react": "^7.17.12"
+  }
 }
