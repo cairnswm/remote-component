@@ -1,26 +1,61 @@
 {
   "name": "remote-component",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "peerDependencies": {
-    "react": "16 - 18",
-    "react-dom": "16 - 18"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cairnswm/remote-component.git"
-  },
-  "keywords": [],
-  "author": "",
+  "description": "Import a remote-component and use as react component in the project",
+  "author": "cairnswm",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cairnswm/remote-component/issues"
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.1"
   },
-  "homepage": "https://github.com/cairnswm/remote-component#readme",
+  "dependencies": {
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "clean": "rimraf dist",
+    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "@babel/cli": "^7.17.10",
-    "@babel/preset-react": "^7.17.12"
-  }
+    "@babel/cli": "^7.16.0",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "cross-env": "^7.0.3"
+  },
+  "main": "dist/index.js",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
